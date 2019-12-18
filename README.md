@@ -1,1 +1,2 @@
-# Notes-project
+## Запуск 
+* npm run dev
