@@ -1,8 +1,29 @@
 <div class="container">
     <header class="header">
+        <button mat-icon-button aria-label="Example icon-button with a heart icon" (click)="opened=!opened">
+            <i class="material-icons">reorder</i>
+        </button>
+        <img src="../assets/logo.png">Заметки
+        <div class="search-field">
+            <input type="search" class="mat-elevation-z2" placeholder="Поиск">
+        </div>
+        <button mat-icon-button aria-label="Example icon-button with a heart icon">
+            <i class="material-icons">view_day</i>
+        </button> (Аватар)
     </header>
-    <nav class="sidebar">
-    </nav>
-    <main class="content">
-    </main>
+
+    <mat-sidenav-container>
+        <mat-sidenav mode="side" [(opened)]="opened">
+            <button mat-button>Закладки</button>
+            <button mat-button>Список категорий</button>
+            <button mat-button>Редактировать категории</button>
+            <button mat-button>Архив</button>
+            <button mat-button>Корзина</button>
+        </mat-sidenav>
+        <mat-sidenav-content>asxkmadsklnadsbjk</mat-sidenav-content>
+    </mat-sidenav-container>
+
+    <!-- <main class="content">
+        content
+    </main> -->
 </div>
