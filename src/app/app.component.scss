@@ -24,29 +24,3 @@
         line-height: 34px;
         flex-basis: 80%;
     }
-    
-    mat-sidenav-container {
-        height: 100%;
-    }
-    
-    mat-sidenav,
-    mat-sidenav-content {
-        padding: 15px;
-    }
-    
-    mat-sidenav {
-        width: 300px;
-    }
-    
-    mat-sidenav-container button {
-        width: 100%;
-        border-radius: 30px;
-        background-color: #fff;
-        margin-bottom: 20px;
-        &:hover {
-            background-color: rgb(231, 231, 231);
-        }
-        &:active {
-            background-color: rgb(243, 200, 171);
-        }
-    }

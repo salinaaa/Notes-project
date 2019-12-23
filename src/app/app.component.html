@@ -11,19 +11,5 @@
             <i class="material-icons">view_day</i>
         </button> (Аватар)
     </header>
-
-    <mat-sidenav-container>
-        <mat-sidenav mode="side" [(opened)]="opened">
-            <button mat-button>Закладки</button>
-            <button mat-button>Список категорий</button>
-            <button mat-button>Редактировать категории</button>
-            <button mat-button>Архив</button>
-            <button mat-button>Корзина</button>
-        </mat-sidenav>
-        <mat-sidenav-content>asxkmadsklnadsbjk</mat-sidenav-content>
-    </mat-sidenav-container>
-
-    <!-- <main class="content">
-        content
-    </main> -->
+    <app-sidebar [opened]="opened"></app-sidebar>
 </div>
