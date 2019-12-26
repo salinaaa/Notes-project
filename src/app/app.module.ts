@@ -8,13 +8,15 @@ import { SidebarComponent } from './sidebar/sidebar/sidebar.component';
 import { AppComponent } from './app.component';
 import { TextNodesComponent } from './text-nodes/text-nodes.component';
 import { AddNodesComponent } from './add-nodes/add-nodes.component';
+import { EditingNodesComponent } from './editing-nodes/editing-nodes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     TextNodesComponent,
-	AddNodesComponent
+	AddNodesComponent,
+	EditingNodesComponent
   ],
   imports: [
     BrowserModule,
