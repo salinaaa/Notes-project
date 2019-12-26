@@ -109,3 +109,22 @@ input:focus ~ .bar:after {
   background-color: #555555;
   color: white;
 }
+
+.example-small-box, .example-large-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.example-small-box {
+  height: 200px;
+  width: 200px;
+}
+
+.example-large-box {
+  height: 100px;
+  width: 1500px;
+}
