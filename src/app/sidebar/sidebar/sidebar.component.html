@@ -1,62 +1,15 @@
 <mat-sidenav-container>
     <mat-sidenav mode="side" [(opened)]="opened">
         <button mat-button>Закладки</button>
-        <button mat-button>Список категорий</button>
-        <button mat-button>Редактировать категории</button>
+        <div class="category">
+            <button mat-button>Список категорий</button>
+            <button mat-button>Редактировать категории</button>
+        </div>
         <button mat-button>Архив</button>
         <button mat-button>Корзина</button>
     </mat-sidenav>
     <mat-sidenav-content>
-	<div class="container">
-   <form>
-    <div class="group">      
-      <input type="text"  required>
-      <span class="bar"></span>
-      <label>Тема заметки</label>
-    </div>
-    <div class="group">      
-      <input type="text"  required>
-      <span class="bar"></span>
-      <label>Текст заметки</label>
-    </div>
-	<div class="group">      
-      <input type="text"  required>
-      <span class="bar"></span>
-      <label>Категория</label>
-    </div>
-	<div class="group">      
-    <form action="handler.php">
-    Укажите цвет фона: <input type="color" name="bg" value="#ff0000">
-    <button class="button">Выбрать</button>
-    </form>
-    </div>
-	<button class="button">Закрыть</button>
-	<button class="button">Закрепить</button>
-  </form>  
-</div>
-<mat-tab-group dynamicHeight>
-  <mat-tab label="Сетка">
-    <div class="example-small-box mat-elevation-z4">
-    1
-	</div>
-	<div class="example-small-box mat-elevation-z4">
-	2
-	</div>
-	<div class="example-small-box mat-elevation-z4">
-	3
-	</div>
-  </mat-tab>
-  <mat-tab label="Список">
-    <div class="example-large-box mat-elevation-z4">
-      1
-    </div>
-	<div class="example-large-box mat-elevation-z4">
-      2
-    </div>
-	<div class="example-large-box mat-elevation-z4">
-      3
-    </div>
-  </mat-tab>
-</mat-tab-group>
-	</mat-sidenav-content>
+	<app-add-nodes></app-add-nodes>
+        <app-text-nodes></app-text-nodes>
+    </mat-sidenav-content>
 </mat-sidenav-container>
