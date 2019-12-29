@@ -2,20 +2,23 @@ import { MaterialModule } from './material.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {RouterModule, Routes} from '@angular/router';
+
+
 
 import { AppComponent } from './app.component';
-import { RouterModule } from '@angular/router';
-import { SidebarComponent } from './sidebar/sidebar/sidebar.component';
 import { TextNodesComponent } from './text-nodes/text-nodes.component';
-import { AddNodesComponent } from './add-nodes/add-nodes.component';
+import { CreateNoteComponent } from './create-note/create-note.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { NoteCardComponent } from './note-card/note-card.component';
 import { EditingNodesComponent } from './editing-nodes/editing-nodes.component';
 import { EditingСategoryComponent } from './editing-category/editing-category.component';
+import { from } from 'rxjs';
 
-const routes = [
-   {path: '', component: AppComponent},
-   {path: 'addnodes', component: AddNodesComponent},
-   {path: 'editnodes', component: EditingNodesComponent},
-   {path: 'editcategory', component: EditingСategoryComponent}
+const routes: Routes = [
+  {path: 'textNode/:id', component: TextNodesComponent},
+  {path: 'editnodes', component: EditingNodesComponent},
+  {path: 'editcategory', component: EditingСategoryComponent}
 ];
 
 @NgModule({
@@ -23,7 +26,8 @@ const routes = [
     AppComponent,
     SidebarComponent,
     TextNodesComponent,
-	AddNodesComponent,
+    CreateNoteComponent,
+    NoteCardComponent,
 	EditingNodesComponent,
 	EditingСategoryComponent
   ],
@@ -31,11 +35,14 @@ const routes = [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-	RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes)
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [RouterModule],
+
 })
 export class AppModule {
+
 
 }
