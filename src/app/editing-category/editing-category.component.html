@@ -1,17 +1,7 @@
-Форма редоктирования заметки
+Форма редоктирования категории
 <br><br><br>
 <div class="container">
    <form>
-    <div class="group">      
-      <input type="text"  required>
-      <span class="bar"></span>
-      <label>Тема заметки</label>
-    </div>
-    <div class="group">      
-      <input type="text"  required>
-      <span class="bar"></span>
-      <label>Текст заметки</label>
-    </div>
 	<div class="group">      
       <input type="text"  required>
       <span class="bar"></span>
@@ -22,14 +12,10 @@
             <button class="button-color" *ngFor="let color of colors" [style.backgroundColor]="color" (click)="changeColor(color)">
             </button>
         </div>
-        <button class="color-board-button" mat-fab color="primary" class="color-board-button" (click)="openColorBoard()">Цвет</button>
-
     </div>
 	<div class="example-button-row">
-  <button mat-raised-button color="primary" type="submit" class="btn btn-primary">Закрепить</button>
   <button mat-raised-button color="primary" type="submit" class="btn btn-primary" routerLink="/">Спрятать/Вернуть</button><br><br>
   <button mat-raised-button color="accent" type="reset" class="btn btn-default" routerLink="/">Закрыть</button>
-   <button mat-raised-button color="accent" type="reset" class="btn btn-default">Удалить/Восстановить</button>
 </div>
   </form>  
 </div>
